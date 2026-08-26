@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andzani's Portfolio</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Glowing Dot Animation Background -->
+  <canvas id="networkCanvas"></canvas>
+  <div class="bg-glow"></div>
+
+  <header>
+    <div class="logo"><span>Andzani's</span> Portfolio</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <nav class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="moon-icon"></i>
+        <i class="fas fa-sun" id="sun-icon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Hello, It's Me</h2>
+      <h1>ANDZANI SINGH</h1>
+      <div class="typing" id="typingText"></div>
+      <p>I'm passionate about building elegant, user-centered digital experiences.
+        I specialize in Full stack development and enjoy bringing ideas to life through code.
+      </p>
+      <div class="hero-btns">
+        <a href="#about" class="btn">About Me</a>
+        <a href="documents/Andzani_s_Resume.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">View
+          resume</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/andzani-mavangwa-45934426b/" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Andzani-Singh/-ANDZANI-M" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-github"></i></a>
+        <a href="https://wa.me/27717758089" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/Andzani1.png" alt="Andzani Singh">
+      <div class="lang-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+          class="lang-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"
+          class="lang-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
+          class="lang-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript" class="lang-icon">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+          class="lang-icon">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="about-image">
+      <img src="images/Andzani1.png" alt="Andzani Singh">
+    </div>
+
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am <strong>Andzani</strong> — a passionate student driven by a deep love for software development and
+        engineering.
+        I am currently studying at <strong>Vaal University of Technology</strong>, pursuing a career in
+        <strong>Information Technology</strong> majoring in Software Development.
+        <br><br>
+        I am a hardworking person who believes that anything is possible when effort and dedication are put in.
+        I am open to collaborating with creative and motivated individuals who want to build meaningful projects that
+        can make life easier and better for people around the world.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="services">
+    <div class="services-content">
+      <h2>Services</h2>
+      <p>What I can do for you</p>
+
+      <div class="services-grid">
+        <div class="service-item">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3>Frontend Development</h3>
+            <p>Building responsive, user-friendly web interfaces using HTML, CSS and JavaScript with modern design
+              principles and smooth interactions.</p>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3>Backend Development</h3>
+            <p>Developing robust server-side applications using PHP,Python, Java with REST API integration for secure data management
+              and scalable web solutions.</p>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+           <h3>Flutter Developer</h3>
+           <p>Building cross-platform mobile applications with Flutter and Dart, creating responsive user interfaces, integrating APIs and developing fast, reliable apps for Android and iOS.</p>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3>Python & AI Development</h3>
+             <p>Developing intelligent applications with Python, machine learning and artificial intelligence, using data processing, computer vision and AI models to build smart and automated solutions.</p>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3>Data Analysis</h3>
+            <p>Transforming raw data into actionable insights using statistical tools, Python, SQL, and visualization techniques to drive informed decision-making.</p>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3>REST API</h3>
+            <p>Designing and implementing RESTful APIs for seamless communication between frontend and backend systems,
+              enabling data exchange and integration with external services.</p>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="skills" id="skills">
+    <div class="skills-content">
+      <h2>My Skills</h2>
+      <p>Technologies I work with and languages I'm proficient in.</p>
+
+      <div class="skills-columns">
+        <div class="skills-column skills-left">
+          <div class="skills-category">
+            <h3>FRONTEND LANGUAGES</h3>
+            <div class="skill-tags-container">
+              <div class="skill-tag">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-bullseye"></i>
+                <span>Dart</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h3>BACKEND LANGUAGES</h3>
+            <div class="skill-tags-container">
+              <div class="skill-tag">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-database mysql-icon"></i>
+                <span>SQL</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-database oracle-icon"></i>
+                <span>PL/SQL</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-code"></i>
+                <span>VB.NET</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h3>TOOLS</h3>
+            <div class="skill-tags-container">
+              <div class="skill-tag">
+                <i class="fas fa-code"></i>
+                <span>VS Code</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-code"></i>
+                <span>Visual Studio</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-file-code"></i>
+                <span>Notepad++</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-coffee"></i>
+                <span>NetBeans</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-column skills-right">
+          <div class="skills-category">
+            <h3>FRAMEWORKS</h3>
+            <div class="skill-tags-container">
+              <div class="skill-tag">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Flutter</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+            </div>
+          </div>
+          <div class="skills-category">
+            <h3>TECHNOLOGIES</h3>
+            <div class="skill-tags-container">
+              <div class="skill-tag">
+                <i class="fas fa-fire"></i>
+                <span>Firebase</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-tag">
+                <i class="fas fa-exchange-alt"></i>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <div class="projects-content">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3 class="project-title">
+              VUT Maintenance App
+              <span class="status-in-progress">In Progress</span>
+            </h3>
+            <p class="project-desc">A maintenance app for Vaal University of Technology residences that lets students
+              report current issues happening in their residences (e.g. plumbing, electricity, security), track status
+              updates in real-time and coordinate with maintenance teams for faster resolution.</p>
+            <div class="project-tags">
+              <span class="project-tag">Full Stack</span>
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">PHP</span>
+              <span class="project-tag">REST API</span>
+            </div>
+            <a href="https://vut-maintenance.web.app/" class="card-learn-btn" target="_blank"
+              rel="noopener noreferrer">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="service-top-bar"></div>
+          <div class="service-body">
+            <h3 class="project-title">
+              Plant Disease Detector System
+              <span class="status-in-progress">In Progress</span>
+            </h3>
+            <p class="project-desc">An AI-powered plant disease detection system that uses Python and machine learning to identify plant diseases from images. The system leverages advanced AI models and LLM technology to provide accurate diagnoses and treatment recommendations for farmers and gardeners.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">AI/ML</span>
+              <span class="project-tag">LLM</span>
+              <span class="project-tag">Computer Vision</span>
+              <span class="project-tag">TensorFlow</span>
+              <span class="project-tag">Deep Learning</span>
+            </div>
+            <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="contact-header">
+      <h2>Get In Touch</h2>
+      <p>Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing
+        together!</p>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="contact-cards">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <div class="contact-card-content">
+              <h3>Email</h3>
+              <a href="mailto:andzanimavangwa88@gmail.com">andzanimavangwa88@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <i class="fas fa-phone"></i>
+            <div class="contact-card-content">
+              <h3>Phone</h3>
+              <p>0717758089</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="contact-card-content">
+              <h3>Location</h3>
+              <p>South Africa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3><span>Andzani's</span> Portfolio</h3>
+        <p>Building simple, reliable software and friendly user experiences.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <h3>Follow</h3>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/andzani-mavangwa-45934426b/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Andzani-Singh/-ANDZANI-M" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://wa.me/27717758089" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 Andzani | All Rights Reserved </p>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
