@@ -76,8 +76,6 @@ function updateActiveNav() {
 const aboutImage = document.querySelector('.about-image');
 const aboutText = document.querySelector('.about-text');
 const servicesContent = document.querySelector('.services-content');
-const skillsContent = document.querySelector('.skills-content');
-const projectsContent = document.querySelector('.projects-content');
 const contactContent = document.querySelector('.contact-content');
 
 // Skills collision animation
@@ -111,7 +109,7 @@ function resetSkillTags() {
 function handleScroll() {
   updateActiveNav();
   toggleBackToTop();
-  
+
   const triggerBottom = window.innerHeight * 0.85;
 
   // About section animation
@@ -136,26 +134,6 @@ function handleScroll() {
     }
   }
 
-  // Skills section scroll animation
-  if (skillsContent) {
-    const skillsPos = skillsContent.getBoundingClientRect().top;
-    if (skillsPos < triggerBottom) {
-      skillsContent.classList.add('active');
-    } else {
-      skillsContent.classList.remove('active');
-    }
-  }
-
-  // Projects section scroll animation
-  if (projectsContent) {
-    const projectsPos = document.querySelector('.projects').getBoundingClientRect().top;
-    if (projectsPos < triggerBottom) {
-      projectsContent.classList.add('active');
-    } else {
-      projectsContent.classList.remove('active');
-    }
-  }
-
   // Contact section scroll animation
   if (contactContent) {
     const contactPos = document.querySelector('.contact').getBoundingClientRect().top;
@@ -169,23 +147,23 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 
-// Intersection Observer for skills section
-const skillsSection = document.querySelector('.skills');
-if (skillsSection) {
-  const skillsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateSkillTags();
-      } else {
-        resetSkillTags();
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-  
-  skillsObserver.observe(skillsSection);
-}
+// Intersection Observer for skills section (disabled since Skills section is now in Tech Stack tab)
+// const skillsSection = document.querySelector('.skills');
+// if (skillsSection) {
+//   const skillsObserver = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         animateSkillTags();
+//       } else {
+//         resetSkillTags();
+//       }
+//     });
+//   }, {
+//     threshold: 0.3
+//   });
+//
+//   skillsObserver.observe(skillsSection);
+// }
 
 // Contact form submission
 const contactForm = document.getElementById('contactForm');
@@ -276,6 +254,40 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Critical page initialization error:', error);
     // Ensure page remains functional even with errors
     document.body.style.visibility = 'visible';
+  }
+});
+
+// Tab switching functionality for portfolio showcase - run outside try-catch
+document.addEventListener('DOMContentLoaded', function () {
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  if (tabButtons.length > 0 && tabContents.length > 0) {
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+
+        // Hide all tab contents
+        tabContents.forEach(content => content.classList.remove('active'));
+        // Show the selected tab content
+        const tabId = this.getAttribute('data-tab');
+        const targetContent = document.getElementById(tabId);
+        if (targetContent) {
+          targetContent.classList.add('active');
+          
+          // Animate skill tags when Tech Stack tab is opened
+          if (tabId === 'techstack') {
+            resetSkillTags();
+            setTimeout(() => {
+              animateSkillTags();
+            }, 100);
+          }
+        }
+      });
+    });
   }
 });
 
