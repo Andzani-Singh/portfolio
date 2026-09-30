@@ -24,10 +24,6 @@
       <a href="#about">About</a>
       <a href="#projects">Portfolio</a>
       <a href="#contact">Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-moon" id="moon-icon"></i>
-        <i class="fas fa-sun" id="sun-icon"></i>
-      </button>
     </nav>
   </header>
 
@@ -102,10 +98,10 @@
       </div>
 
       <nav class="tab-navigation">
-        <button class="tab-button active" data-tab="projects-tab">Projects</button>
-        <button class="tab-button" data-tab="certificates">Certificates</button>
-        <button class="tab-button" data-tab="techstack">Tech Stack</button>
-        <button class="tab-button" data-tab="services">Services</button>
+        <button class="tab-button active" data-tab="projects-tab"><span class="tab-button-code" aria-hidden="true">&lt;&gt;</span>Projects</button>
+        <button class="tab-button" data-tab="certificates"><i class="fas fa-file-lines" aria-hidden="true"></i>Certificates</button>
+        <button class="tab-button" data-tab="techstack"><i class="fas fa-layer-group" aria-hidden="true"></i>Tech Stack</button>
+        <button class="tab-button" data-tab="services"><i class="fas fa-toolbox" aria-hidden="true"></i>Services</button>
       </nav>
 
       <!-- Projects Tab Content -->
@@ -114,14 +110,17 @@
           <!-- Project Card 1 -->
           <article class="project-card">
             <div class="card-image-placeholder">
-              <span>Image Placeholder</span>
+              <a class="project-image-link" href="images/mbonisalon.png" target="_blank" rel="noopener noreferrer"
+                aria-label="Open the Mbhoni's Salon screenshot at full size">
+                <img src="images/mbonisalon.png" alt="Mbhoni's Salon website screenshot">
+              </a>
             </div>
             <div class="card-content">
               <h3 class="card-title">Mbhoni's Salon</h3>
               <p class="card-description">A modern salon booking website allowing customers to browse services, schedule appointments, and manage their bookings online.</p>
               <div class="card-footer">
-                <a href="https://mbhoni-s-salon.web.app/" class="card-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <button class="card-button" disabled>Details</button>
+                <a href="https://mbhoni-s-salon.web.app/" class="card-button" target="_blank" rel="noopener noreferrer">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a href="https://github.com/Andzani-Singh/Mbhoni-s-Salon" class="card-button" target="_blank" rel="noopener noreferrer">More Details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -129,14 +128,14 @@
           <!-- Project Card 2 -->
           <article class="project-card">
             <div class="card-image-placeholder">
-              <span>Image Placeholder</span>
+              <img src="images/rms.png" alt="Residence Management System project">
             </div>
             <div class="card-content">
               <h3 class="card-title">Residence Management System</h3>
               <p class="card-description">A comprehensive residence management application for tracking maintenance requests, managing residents, and coordinating facility operations.</p>
               <div class="card-footer">
-                <a href="https://residencemanagementsys.freedev.app/" class="card-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <button class="card-button" disabled>Details</button>
+                <a href="https://residencemanagementsys.freedev.app/" class="card-button" target="_blank" rel="noopener noreferrer">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <a href="https://github.com/Andzani-Singh/Residence-Management-System" class="card-button" target="_blank" rel="noopener noreferrer">More Details <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
               </div>
             </div>
           </article>
@@ -150,11 +149,12 @@
               <h3 class="card-title">VUT Maintenance App</h3>
               <p class="card-description">A maintenance app for Vaal University of Technology residences that lets students report issues and track status updates in real-time.</p>
               <div class="card-footer">
-                <a href="https://vut-maintenance.web.app/" class="card-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <button class="card-button" disabled>Details</button>
+                <a href="https://vut-maintenance.web.app/" class="card-button" target="_blank" rel="noopener noreferrer">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <button class="card-button" disabled>Details <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
               </div>
             </div>
           </article>
+
         </div>
       </div>
 
@@ -192,7 +192,7 @@
           <!-- Certificate Card 3 -->
           <article class="project-card">
             <div class="card-image-placeholder">
-              <img src="images/vut.png" alt="VUT MDL Certificate">
+              <img src="images/vut.png" alt="VUT MDL Certificate" class="certificate-preview-image">
             </div>
             <div class="card-content">
               <h3 class="card-title">VUT MDL Certificate</h3>
@@ -202,15 +202,43 @@
               </div>
             </div>
           </article>
+
+          <!-- Certificate Card 4 -->
+          <article class="project-card">
+            <div class="card-image-placeholder">
+              <img src="images/cisco.png" alt="Cisco Packet Tracer Certificate" class="certificate-preview-image">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Getting Started with Cisco Packet Tracer</h3>
+              <p class="card-description">An introduction to creating network topologies and simulating network behavior with Cisco Packet Tracer.</p>
+              <div class="card-footer">
+                <a href="documents/Getting_Started_with_Cisco_Packet_Tracer_certificate_224632132-edu-vut-ac-za_ba40d81e-69f7-420e-873b-6b76459c86ea.pdf" class="card-button" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificate Card 5 -->
+          <article class="project-card">
+            <div class="card-image-placeholder">
+              <img src="images/FNB.png" alt="FNB App of the Year Full Stack Development certificate" class="certificate-preview-image">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">FNB App of the Year: Full Stack Development</h3>
+              <p class="card-description">Full-stack development experience focused on designing and building the FNB App of the Year, from user interfaces to backend functionality.</p>
+              <div class="card-footer">
+                <a href="documents/FNB%20%20App%20of%20the%20year%20Certificate.pdf" class="card-button" target="_blank" rel="noopener noreferrer">View Certificate</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
 
       <!-- Tech Stack Tab Content -->
       <div class="tab-content" id="techstack">
-        <div class="skills-content">
+        <div class="skills-content active">
           <div class="skills-columns">
             <div class="skills-column skills-left">
-              <div class="skills-category">
+              <div class="skills-category languages-category">
                 <h3>LANGUAGES</h3>
                 <div class="skill-tags-container">
                   <div class="skill-tag">
@@ -242,12 +270,12 @@
                     <span>PHP</span>
                   </div>
                   <div class="skill-tag">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnet/dotnet-original.svg" alt="VB.NET" class="tech-icon">
-                    <span>VB.NET</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualbasic/visualbasic-original.svg" alt="Visual Basic" class="tech-icon">
+                    <span>Visual Basic</span>
                   </div>
                 </div>
               </div>
-              <div class="skills-category">
+              <div class="skills-category square-skills-category">
                 <h3>FRAMEWORKS</h3>
                 <div class="skill-tags-container">
                   <div class="skill-tag">
@@ -266,7 +294,7 @@
               </div>
             </div>
             <div class="skills-column skills-right">
-              <div class="skills-category">
+              <div class="skills-category square-skills-category">
                 <h3>DATABASES</h3>
                 <div class="skill-tags-container">
                   <div class="skill-tag">
@@ -283,7 +311,7 @@
                   </div>
                 </div>
               </div>
-              <div class="skills-category">
+              <div class="skills-category square-skills-category">
                 <h3>TOOLS & TECHNOLOGIES</h3>
                 <div class="skill-tags-container">
                   <div class="skill-tag">
@@ -293,6 +321,18 @@
                   <div class="skill-tag">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="tech-icon">
                     <span>GitHub</span>
+                  </div>
+                  <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netbeans/netbeans-original.svg" alt="Apache NetBeans" class="tech-icon">
+                    <span>NetBeans</span>
+                  </div>
+                  <div class="skill-tag">
+                    <img src="https://cdn.simpleicons.org/notepadplusplus/90E59A" alt="Notepad++" class="tech-icon">
+                    <span>Notepad++</span>
+                  </div>
+                  <div class="skill-tag">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Visual Studio Code" class="tech-icon">
+                    <span>VS Code</span>
                   </div>
                 </div>
               </div>
@@ -308,6 +348,7 @@
             <div class="service-item">
               <div class="service-top-bar"></div>
               <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
                 <h3>Frontend Development</h3>
                 <p>Building responsive, user-friendly web interfaces using HTML, CSS and JavaScript with modern design
                   principles and smooth interactions.</p>
@@ -318,6 +359,7 @@
             <div class="service-item">
               <div class="service-top-bar"></div>
               <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fas fa-server"></i></div>
                 <h3>Backend Development</h3>
                 <p>Developing robust server-side applications using PHP,Python, Java with REST API integration for secure data management
                   and scalable web solutions.</p>
@@ -328,6 +370,7 @@
             <div class="service-item">
               <div class="service-top-bar"></div>
               <div class="service-body">
+               <div class="service-icon" aria-hidden="true"><i class="fas fa-mobile-screen-button"></i></div>
                <h3>Flutter Developer</h3>
                <p>Building cross-platform mobile applications with Flutter and Dart, creating responsive user interfaces, integrating APIs and developing fast, reliable apps for Android and iOS.</p>
                 <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
@@ -337,6 +380,7 @@
             <div class="service-item">
               <div class="service-top-bar"></div>
               <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
                 <h3>Python & AI Development</h3>
                  <p>Developing intelligent applications with Python, machine learning and artificial intelligence, using data processing, computer vision and AI models to build smart and automated solutions.</p>
                 <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
@@ -346,6 +390,7 @@
             <div class="service-item">
               <div class="service-top-bar"></div>
               <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
                 <h3>Data Analysis</h3>
                 <p>Transforming raw data into actionable insights using statistical tools, Python, SQL, and visualization techniques to drive informed decision-making.</p>
                 <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
@@ -355,9 +400,30 @@
             <div class="service-item">
               <div class="service-top-bar"></div>
               <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fas fa-diagram-project"></i></div>
                 <h3>REST API</h3>
                 <p>Designing and implementing RESTful APIs for seamless communication between frontend and backend systems,
                   enabling data exchange and integration with external services.</p>
+                <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-top-bar"></div>
+              <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fab fa-figma"></i></div>
+                <h3>Figma</h3>
+                <p>Creating clean UI/UX designs, wireframes, and interactive prototypes in Figma.</p>
+                <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-top-bar"></div>
+              <div class="service-body">
+                <div class="service-icon" aria-hidden="true"><i class="fas fa-database"></i></div>
+                <h3>SQL Developer</h3>
+                <p>Designing relational databases, writing efficient SQL queries, and managing data for reliable applications.</p>
                 <a href="#contact" class="card-learn-btn">LEARN MORE <i class="fas fa-arrow-right"></i></a>
               </div>
             </div>

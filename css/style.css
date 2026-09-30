@@ -134,10 +134,6 @@ header {
   border-radius: 2px;
 }
 
-.nav-links button.theme-toggle {
-  margin-left: 10px;
-}
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -469,21 +465,24 @@ header {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
   margin-top: 20px;
-  max-width: 900px;
+  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
 .service-item {
+  display: flex;
+  flex-direction: column;
   background: #131c2e;
-  border-radius: 18px;
+  border: 1px solid rgba(56, 189, 248, 0.18);
+  border-radius: 12px;
   overflow: hidden;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="light"] .service-item {
@@ -491,58 +490,87 @@ header {
 }
 
 .service-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.25);
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
 }
 
 .service-top-bar {
-  height: 6px;
+  height: 3px;
   background: linear-gradient(90deg, var(--primary), #0ea5e9);
-  border-radius: 18px 18px 0 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-item:hover .service-top-bar,
+.service-item:focus-within .service-top-bar {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--primary);
+}
+
+.service-icon i {
+  font-size: 18px;
 }
 
 .service-body {
-  padding: 16px 20px 18px;
+  flex: 1;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .service-body h3 {
   color: #ffffff;
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 600;
   margin: 0;
 }
 
 .service-body p {
   color: #94a3b8;
-  font-size: 0.97rem;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  line-height: 1.65;
   margin: 0;
+  flex: 1;
 }
 
 .card-learn-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 6px;
-  padding: 6px 14px;
-  border: 2px solid var(--primary);
-  border-radius: 999px;
+  gap: 8px;
+  margin-top: auto;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 0;
   color: var(--primary);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
   width: fit-content;
 }
 
 .card-learn-btn:hover {
-  background: var(--primary);
-  color: #0f172a;
+  color: #7dd3fc;
   transform: translateX(4px);
 }
 
@@ -656,6 +684,40 @@ header {
   object-fit: contain;
   transition: all 0.3s ease;
   display: block;
+}
+
+.languages-category .tech-icon,
+.square-skills-category .tech-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.languages-category .skill-tag,
+.square-skills-category .skill-tag {
+  width: 100px;
+  height: 108px;
+  padding: 12px 8px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #131c2e;
+  border-color: rgba(56, 189, 248, 0.2);
+  color: #f8fafc;
+  text-align: center;
+}
+
+[data-theme="light"] .languages-category .skill-tag,
+[data-theme="light"] .square-skills-category .skill-tag {
+  background: #131c2e;
+  border-color: rgba(56, 189, 248, 0.2);
+  color: #f8fafc;
+}
+
+.languages-category .skill-tag span,
+.square-skills-category .skill-tag span {
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 /* Brand colors for specific icons */
@@ -949,6 +1011,9 @@ header {
 
 .tab-button {
   padding: 12px 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   border: 2px solid var(--primary);
   border-radius: 25px;
   background: transparent;
@@ -958,6 +1023,11 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
+}
+
+.tab-button-code {
+  font-family: monospace;
+  font-weight: 700;
 }
 
 .tab-button:hover,
@@ -986,6 +1056,12 @@ header {
   border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
+#certificates .project-card,
+#projects-tab .project-card {
+  display: flex;
+  flex-direction: column;
+}
+
 [data-theme="light"] .portfolio-showcase .project-card {
   background: #1e293b;
   border-color: rgba(56, 189, 248, 0.2);
@@ -1006,7 +1082,25 @@ header {
 .portfolio-showcase .card-image-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
+}
+
+.portfolio-showcase .card-image-placeholder img.certificate-preview-image {
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+}
+
+.portfolio-showcase .project-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+.portfolio-showcase .project-image-link:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: -3px;
 }
 
 .portfolio-showcase .card-image-placeholder span {
@@ -1048,6 +1142,10 @@ header {
 
 .portfolio-showcase .card-button {
   flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 10px 16px;
   border: 1px solid var(--primary);
   border-radius: 6px;
@@ -1392,21 +1490,23 @@ header {
 }
 
 footer {
-  padding: 50px 10% 30px;
-  background: rgba(11, 18, 32, 0.7);
-  margin-top: 40px;
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 56px 8% 24px;
+  background: #0b1220;
+  margin-top: 56px;
+  border-top: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 [data-theme="light"] footer {
-  background: rgba(248, 250, 252, 0.7);
+  background: #f8fafc;
   border-top: 1px solid #e2e8f0;
 }
 
 .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: minmax(0, 1.5fr) minmax(150px, 0.7fr) minmax(180px, 0.8fr);
+  gap: 48px;
   align-items: start;
 }
 
@@ -1423,20 +1523,30 @@ footer {
 .footer-brand p {
   color: var(--text-muted);
   line-height: 1.6;
+  max-width: 340px;
 }
 
-.footer-links h4,
-.footer-socials h4 {
+.footer-links h3,
+.footer-socials h3 {
   color: var(--text-light);
-  margin-bottom: 10px;
-  font-size: 1rem;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .footer-links a {
-  display: block;
+  display: inline-block;
   color: var(--text-muted);
   text-decoration: none;
-  margin: 6px 0 0 0;
+  margin: 0;
   transition: color 0.2s ease;
 }
 
@@ -1446,6 +1556,12 @@ footer {
 
 .socials {
   margin: 10px 0 0;
+}
+
+.footer-socials .socials {
+  display: flex;
+  gap: 8px;
+  margin: 0;
 }
 
 .socials a {
@@ -1462,9 +1578,38 @@ footer {
 }
 
 .footer-socials h3 {
-  color: var(--primary);
+  color: var(--text-light);
+}
+
+.footer-socials .socials a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  text-decoration: none;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.08);
+  color: var(--text-light);
   font-size: 1.1rem;
-  margin-bottom: 10px;
+}
+
+.footer-socials .socials a:hover {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: var(--primary);
+}
+
+.footer-socials .socials a[aria-label="LinkedIn"] i {
+  color: #0a66c2;
+}
+
+.footer-socials .socials a[aria-label="GitHub"] i {
+  color: #f0f6fc;
+}
+
+.footer-socials .socials a[aria-label="WhatsApp"] i {
+  color: #25d366;
 }
 
 .footer-bottom {
@@ -1472,8 +1617,9 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
-  padding-top: 15px;
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding-top: 16px;
   border-top: 1px solid rgba(148, 163, 184, 0.1);
 }
 
@@ -1508,35 +1654,8 @@ footer {
   box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
 }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-light);
-}
-
-.theme-toggle:hover {
-  color: var(--primary);
-  transform: scale(1.15);
-}
-
 h3 {
   color: var(--primary);
-}
-
-.theme-toggle i {
-  font-size: 1.3rem;
-  color: inherit;
-  transition: transform 0.3s ease;
-}
-
-.theme-toggle:hover i {
-  transform: rotate(20deg);
 }
 
 /* Hamburger Menu */
@@ -1577,18 +1696,6 @@ h3 {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-#sun-icon {
-  display: none;
-}
-
-[data-theme="light"] #moon-icon {
-  display: none;
-}
-
-[data-theme="light"] #sun-icon {
-  display: inline-block;
-}
-
 @media (max-width: 768px) {
   header {
     flex-direction: row;
@@ -1607,8 +1714,12 @@ h3 {
     width: 70%;
     max-width: 300px;
     height: 100vh;
-    background: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.76);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border-left: 1px solid rgba(248, 250, 252, 0.16);
+    border-radius: 16px 0 0 16px;
+    box-shadow: -18px 0 48px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1646,10 +1757,6 @@ h3 {
 
   .nav-links a:hover::after {
     width: 100%;
-  }
-
-  .theme-toggle i {
-    font-size: 1.2rem;
   }
 
   .hero {
@@ -1746,7 +1853,7 @@ h3 {
   }
 
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
@@ -1757,12 +1864,12 @@ h3 {
 
 
   .service-icon {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
   }
 
   .service-icon i {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 
   .service-item h3 {
@@ -1893,20 +2000,19 @@ h3 {
 
   .footer-container {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
 
-  .footer-links a,
   .footer-socials .socials {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .footer-bottom {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .copyright {
-    text-align: center;
+    text-align: left;
   }
 }
 

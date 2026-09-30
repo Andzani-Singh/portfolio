@@ -1,18 +1,3 @@
-// Theme Toggle
-const themeToggle = document.getElementById("themeToggle");
-const htmlElement = document.documentElement;
-
-// Check for saved theme preference or default to 'dark'
-const savedTheme = localStorage.getItem("theme") || "dark";
-htmlElement.setAttribute("data-theme", savedTheme);
-
-themeToggle.addEventListener("click", () => {
-  const currentTheme = htmlElement.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-  htmlElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-});
-
 // Typing effect
 const roles = ["Full Stack Developer", " Python Developer", "Flutter Developer"];
 const textElement = document.getElementById("typingText");
