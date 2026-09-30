@@ -160,11 +160,14 @@ contactForm.addEventListener('submit', async function (e) {
     email: formData.get('email'),
     message: formData.get('message')
   };
-  const WEBHOOK_URL = 'PASTE_YOUR_MAKE_WEBHOOK_URL_HERE';
+  const FORM_SUBMIT_URL = 'https://formsubmit.co/ajax/andzanimavangwa88@gmail.com';
   try {
-    const res = await fetch(WEBHOOK_URL, {
+    const res = await fetch(FORM_SUBMIT_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
       body: JSON.stringify(payload)
     });
     if (!res.ok) throw new Error('Request failed');
