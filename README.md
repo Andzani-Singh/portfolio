@@ -50,7 +50,8 @@ The purpose of this portfolio is to showcase my:
 
 ## 🚀 Live Website
 
-**[View My Portfolio]([YOUR-LIVE-WEBSITE-LINK-HERE](https://andzani-singh.github.io/portfolio/))**
+[View My Portfolio](https://andzani-singh.github.io/)
+
 
 ## 📬 Contact
 
