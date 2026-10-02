@@ -1182,7 +1182,19 @@ header {
   }
 
   .tab-navigation {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: min(100%, 440px);
+    margin: 0 auto 28px;
+  }
+
+  .tab-button {
+    justify-content: center;
+    min-height: 52px;
+    padding: 10px 12px;
+    border-radius: 16px;
+    white-space: nowrap;
   }
 }
 
