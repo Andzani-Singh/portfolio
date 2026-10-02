@@ -1931,6 +1931,18 @@ h3 {
     font-size: 12px;
   }
 
+  .languages-category .skill-tags-container,
+  .square-skills-category .skill-tags-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .languages-category .skill-tag,
+  .square-skills-category .skill-tag {
+    width: 100%;
+    min-width: 0;
+  }
+
   /* On mobile, make both columns animate from opposite sides still */
   .skills-left .skill-tag {
     transform: translateX(-80px);
