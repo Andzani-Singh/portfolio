@@ -2014,6 +2014,11 @@ h3 {
     align-items: center;
   }
 
+  .contact-info,
+  .contact-form-container {
+    width: 100%;
+  }
+
   .contact-card {
     flex-direction: row;
     height: 82px;
