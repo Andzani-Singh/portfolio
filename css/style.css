@@ -2004,6 +2004,25 @@ h3 {
 
   .contact-card {
     flex-direction: row;
+    height: 82px;
+    padding: 10px 12px;
+  }
+
+  .contact-card-content {
+    min-width: 0;
+  }
+
+  .contact-card-content h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 3px;
+  }
+
+  .contact-card-content p,
+  .contact-card-content a {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
   }
 
   .contact-header {
