@@ -944,7 +944,7 @@ header {
 
 .projects {
   min-height: 100vh;
-  padding: 25px 10% 60px;
+  padding: 25px 10% 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1049,17 +1049,28 @@ header {
   max-width: 1200px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 0;
+  overflow: visible;
+  padding-bottom: 12px;
 }
 
 .portfolio-showcase .project-card {
   background: #131c2e;
   border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.portfolio-showcase .project-card:hover,
+#certificates .project-card:hover,
+#projects-tab .project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.25);
 }
 
 #certificates .project-card,
 #projects-tab .project-card {
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 [data-theme="light"] .portfolio-showcase .project-card {
@@ -1147,12 +1158,9 @@ header {
   justify-content: center;
   gap: 8px;
   padding: 10px 16px;
-  border: 1px solid var(--primary);
-  border-radius: 6px;
-  background: transparent;
+  border-radius: 8px;
   font-size: 12px;
-  font-weight: 500;
-  color: var(--primary);
+  font-weight: 600;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -1160,10 +1168,32 @@ header {
   font-family: 'Poppins', sans-serif;
 }
 
-.portfolio-showcase .card-button:hover {
+.portfolio-showcase .card-button-demo {
   background: var(--primary);
   color: #0f172a;
-  border-color: var(--primary);
+  border: none;
+}
+
+.portfolio-showcase .card-button-demo:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
+.portfolio-showcase .card-button-github {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+}
+
+.portfolio-showcase .card-button-github:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .portfolio-showcase .card-button-github:hover {
+  background: #f1f5f9;
 }
 
 @media (max-width: 1024px) {
@@ -1203,7 +1233,7 @@ header {
   border-radius: 18px;
   overflow: hidden;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -1212,7 +1242,7 @@ header {
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(6px);
   box-shadow: 0 12px 36px rgba(56, 189, 248, 0.25);
 }
 
