@@ -1196,6 +1196,20 @@ header {
   background: #f1f5f9;
 }
 
+.portfolio-showcase .card-button-certificate {
+  background: var(--primary);
+  color: #0f172a;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.portfolio-showcase .card-button-certificate:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
+}
+
 @media (max-width: 1024px) {
   .portfolio-showcase .projects-grid {
     grid-template-columns: repeat(2, 1fr);
