@@ -1,5 +1,5 @@
 // Typing effect
-const roles = ["Full Stack Developer", " Python Developer", "Flutter Developer"];
+const roles = ["Full Stack Developer", " Python Developer", "Data Analyst"];
 const textElement = document.getElementById("typingText");
 let roleIndex = 0, charIndex = 0, typingSpeed = 100, deletingSpeed = 50, isDeleting = false;
 function typeEffect() {
