@@ -265,7 +265,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const targetContent = document.getElementById(tabId);
         if (targetContent) {
           targetContent.classList.add('active');
-          
+
           // Animate skill tags when Tech Stack tab is opened
           if (tabId === 'techstack') {
             resetSkillTags();

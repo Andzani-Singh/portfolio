@@ -420,6 +420,7 @@ header {
   line-height: 1.7;
 }
 
+
 .services {
   min-height: 100vh;
   padding: 25px 10% 80px;
@@ -1894,6 +1895,8 @@ h3 {
     flex-direction: column;
     text-align: center;
   }
+
+
 
   .about-text,
   .about-image {
